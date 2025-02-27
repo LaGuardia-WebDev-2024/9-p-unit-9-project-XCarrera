@@ -1,15 +1,15 @@
 setup = function() {
-    size(600, 400);
+    size(1600, 700);
 };
 
 //Background Images
-var caveSceneImage = loadImage("https://www.shutterstock.com/image-vector/vector-illustration-background-forest-scenery-600nw-1807427365.jpg");
+var caveSceneImage = loadImage("https://opengameart.org/sites/default/files/parallax-forest-preview.png");
 
-var forestImage = loadImage("https://t3.ftcdn.net/jpg/02/50/39/72/360_F_250397206_HuBj2V5oEytcqonzpzum4IjEjtAsZq3g.jpg");
+var forestImage = loadImage("https://img.itch.zone/aW1hZ2UvMTIxNjU4LzU2MDM4MS5wbmc=/original/N%2Fb6N3.png");
 
 //Variable Declarations
 var sceneImage = caveSceneImage;
-var sceneText = "Where do you want to go?  [Press f for forest and c for cave]";
+var sceneText = "Its getting dark and you lost your pet fox, which way do you go?  [Press f for forest and c for cave]";
 
 draw = function(){
     
@@ -30,15 +30,15 @@ draw = function(){
 };
 
 var drawScene = function(){
-    image(sceneImage, 0, 0);
+    image(sceneImage, 0, 0, 1600, 700);
     
     fill(0,0,0);
-    rect(0, 350, 600, 100);
+    rect(0, 630, 2000, 90);
       
     fill(255,255,255);
     textSize(20);
    
-   text(sceneText, 10, 375);
+   text(sceneText, 10, 670);
 };
 
 
