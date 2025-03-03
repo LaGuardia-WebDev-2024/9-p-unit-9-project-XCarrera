@@ -1,8 +1,10 @@
 setup = function() {
-    size(1600, 700);
+    size(1500, 700);
 };
 
 //Background Images
+
+var menuImage = loadImage("https://img.itch.zone/aW1hZ2UvMTEyNjM3LzUyMjcwMi5wbmc=/original/Ncg21w.png");
 var startSceneImage = loadImage("https://img.itch.zone/aW1hZ2UvMTEyNjM3LzUyMjcwMi5wbmc=/original/Ncg21w.png");
 
 var forestImage = loadImage("https://img.itch.zone/aW1hZ2UvMTIxNjU4LzU2MDM4MS5wbmc=/original/N%2Fb6N3.png");
@@ -44,7 +46,7 @@ draw = function(){
 };
 
 var drawScene = function(){
-    image(sceneImage, 0, 0, 1600, 700);
+    image(sceneImage, 0, 0, 1500, 700);
     
     fill(0,0,0);
     rect(0, 630, 2000, 90);
