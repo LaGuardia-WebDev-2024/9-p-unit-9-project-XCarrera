@@ -13,6 +13,8 @@ var cave1Image = loadImage("https://img.itch.zone/aW1nLzEyMTkxMTQwLnBuZw==/origi
 
 var cavebewareImage = loadImage("https://img.freepik.com/premium-photo/pixel-art-cave-scene-with-car-entrance_811279-134357.jpg");
 
+var diedImage = loadImage("https://www.shutterstock.com/shutterstock/videos/1028989112/thumb/1.jpg?ip=x480");
+
 //Variable Declarations
 var sceneImage = startSceneImage;
 var sceneText = "Its getting dark and you lost your pet fox, which way do you go?  [Press f for forest and c for cave]";
@@ -25,7 +27,7 @@ draw = function(){
    if(keyPressed){
      if(key == 'f'){
        sceneImage = forestImage;   
-       sceneText = "No fox here.  [Press s to go back]";
+       sceneText = "No fox here.   [Press s to go back]";
      } 
      if(key == 's'){
       sceneImage = startSceneImage;
@@ -37,9 +39,29 @@ draw = function(){
     } 
     if(key == 'g'){
       sceneImage = cave1Image;
-      sceneText = "  [Press g to continue and s to restart]";
+      sceneText = "You found a Cyclop!  [Press a for attack1, h for attack2 and s to restart]";
+      
+      
+      
+      
     } 
     
+    if(key == 'a'){
+      sceneImage = diedImage;
+      sceneText = "YOU DIED!!  [Press s to restart]"; 
+      text("YOU SHOULD'NT HAVE COME HERE",(0,600), random(1500,700));
+      
+      
+      
+    } 
+    if(key == 'h'){
+      sceneImage = cave1Image;
+      sceneText = "You found a Cyclop!  [Press a for attack1, h for attack2 and s to restart]";
+      
+      
+      
+      
+    } 
     
    }
   
