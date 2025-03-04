@@ -19,6 +19,7 @@ var diedImage = loadImage("https://www.shutterstock.com/shutterstock/videos/1028
 var sceneImage = startSceneImage;
 textFont(createFont("Papyrus"));
 var sceneText = "Its getting dark and you lost your pet fox, which way do you go?  [Press f for forest and c for cave]";
+var Cyclop = 0;
 
 draw = function(){
     
@@ -50,6 +51,9 @@ draw = function(){
     
     if(key == 'a'){
       sceneImage = diedImage;
+      textSize(65);
+      fill(219, 0, 0);
+      text("YOU SHOULD'NT HAVE COME HERE",random(0,600),random(0,600));
       textFont(createFont("Papyrus"));
       sceneText = "YOU DIED!!  [Press s to restart]"; 
       
@@ -57,10 +61,9 @@ draw = function(){
     } 
     if(key == 'h'){
       sceneImage = cave1Image;
-      text("Bru",random(0,600),random(0,400));
       textFont(createFont("Papyrus"));
       sceneText = "You found a Cyclop!  [Press a for attack1, h for attack2 and s to restart]";
-      
+      Cyclop = 1;
       
       
       
@@ -79,7 +82,15 @@ var drawScene = function(){
     textSize(20);
    
    text(sceneText, 10, 670);
+   
+   if(Cyclop ==1){
+   
+   }
+   
+   
+   
 };
+
 
 
 
